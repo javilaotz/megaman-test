@@ -1,8 +1,13 @@
-import React, {useState} from 'react'
+import React, { Component } from 'react'
 
-const MenuItems = props => {
-  return props.options.map((item, index) => <button key={index}>{item.name}</button>)
+export default class MenuItems extends Component {
+  state = {}
+  
+  render() {
+    return (
+      <div>
+        {this.props.options.map((item, index) => <button key={index}>{item.name}</button>)}
+      </div>
+    )
+  }
 }
-
-export default MenuItems;
-

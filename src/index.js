@@ -2,11 +2,12 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import Home from './components/Home/Home';
 import * as serviceWorker from './serviceWorker';
+import firebase, { FirebaseContext } from './components/Firebase';
 
 ReactDOM.render(
-  <React.StrictMode>
+  <FirebaseContext.Provider value={new firebase()}>
     <Home />
-  </React.StrictMode>,
+  </FirebaseContext.Provider>,
   document.getElementById('root')
 );
 
